@@ -1,0 +1,3 @@
+function PowerTwo(n) {
+
+}
