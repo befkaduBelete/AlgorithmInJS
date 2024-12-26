@@ -8,34 +8,12 @@ accumulating a single output value. It takes an initial value and processes elem
 reducing the array to a single result. It is useful for doing operations like max in an array, min in an array and sum of array 
 */
 
-// const a = [2, 4, 6];
+const fruits = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple'];
 
-// // Use reduce to calculate the sum
-// const sum = a.reduce((acc, x) => 
-//     acc + x, 0);
+const fruitCount = fruits.reduce((accumulator, currentValue) => {
+  accumulator[currentValue] = (accumulator[currentValue] || 0) + 1;
+  return accumulator;
+}, {});
 
-// console.log(sum);
-
-function stranglength(acc,x){
-   console.log(x,x.length)
-   return x.length;
-}
-const b = ["js", "html", "css"];
-
-// Use reduce to calculate the sum of the lengths of the strings
-const res = b.reduce((stranglength, str) => acc + str.length, 0);
-
-console.log(res);
-
-
-
-// const a = [2, 4, 6];
-
-// function sum2(acc, x) {
-//     console.log("sum=,", acc+x)
-//   return acc + x;
-// }
-
-// const sum = a.reduce(sum2, 2);
-
-// console.log(sum);
+console.log(fruitCount); 
+// Output: { apple: 3, banana: 2, orange: 1 }
